@@ -5,14 +5,14 @@ x = int(input("введите номер задания:"))
 #12.1
 def f1():
     class Restaurant:
-        def init(self, name, cuisine_type):
+        def __init__(self, name, cuisine_type):
             self.name = name
             self.cuisine_type = cuisine_type
         def describe_restaurant(self):
             print(f"{self.name} is a {self.cuisine_type} restaurant.")
     class IceCreamStand(Restaurant):
-        def init(self, name, cuisine_type, flavors):
-            super().init(name, cuisine_type)
+        def __init__(self, name, cuisine_type, flavors):
+            super().__init__(name, cuisine_type)
             self.flavors = flavors
         def display_flavors(self):
             print("У нас есть следующие вкусы мороженого:")
@@ -27,7 +27,7 @@ if x == 1:
 # 12.2
 def f2():
     class IceCreamStand:
-        def init(self, name, flavors, location, working_hours, type_flavors):
+        def __init__(self, name, flavors, location, working_hours, type_flavors):
             self.name = name
             self.flavors = flavors
             self.location = location
@@ -75,7 +75,7 @@ if x==2:
 #12.3
 def f3():
     class IceCreamStand:
-        def init(self, name, flavors):
+        def __init__(self, name, flavors):
             self.name = name
             self.flavors = flavors
         def get_menu(self):
